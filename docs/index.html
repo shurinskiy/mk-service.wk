@@ -12,7 +12,7 @@
 <header class="header" id="header"> 
 	<div class="header__inner container">
 		<a href="./" class="header__logo"><img src="./images/logo-top.png" alt=""></a>
-		<button class="header__callback-btn"></button>
+		<button class="header__callback-btn" data-modal="callback"></button>
 		<div class="header__phones">
 			<a class="header__phone" href="tel:+78007001105">+7 (800) 700-11-05</a>
 			<a class="header__phone" href="tel:+79617146567">+7 (961) 714-65-67</a>
@@ -22,7 +22,7 @@
  
 <!-- https://i.ytimg.com/vi/11cuatZm8K8/maxresdefault.jpg -->
 
-<section class="hero" id="order">
+<section class="hero">
 	<div class="container">
 		<h1 class="hero__title">Предоставляя своим клиентам только лучшие решения по <span>заемам</span></h1>
 		<div class="hero__inner">
@@ -30,28 +30,29 @@
 				<iframe height="425" class="hero__video-frame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<div class="hero__video-play" data-youtube-src="https://www.youtube.com/embed/11cuatZm8K8?autoplay=1"></div>
 			</div>
-			<div class="hero__side">
+			<div class="hero__side" id="order">
 				<form class="callback" action="./">
-					<h3 class="callback__title">Оставтьте заявку на консультацию</h3>
-					<input class="callback__input" type="text" name="callback_name" placeholder="Ваше имя" autocomplete="off">
-					<input class="callback__input" type="tel" name="callback_phone" placeholder="Ваше телефон" autocomplete="off">
-					<div class="callback__agree">
-						<input type="checkbox" name="callback_agree" checked>
-						<p>Я согласен с уcловиями обработки <a href="./">персональных данных</a></p>
-					</div>
-					<input class="callback__submit" type="submit" value="Отправить">
-				</form>
+	<h3 class="callback__title">Оставтьте заявку на консультацию</h3>
+	<input class="callback__input" type="text" name="callback_name" placeholder="Ваше имя" autocomplete="off">
+	<input class="callback__input" type="tel" name="callback_phone" placeholder="Ваше телефон" autocomplete="off">
+	<div class="callback__agree">
+		<input type="checkbox" name="callback_agree" checked>
+		<p>Я согласен с уcловиями обработки <a href="./">персональных данных</a></p>
+	</div>
+	<input class="callback__submit" type="submit" value="Отправить">
+</form>
+ 
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="about" id="about">
+<section class="about">
 	<div class="about__inner container">
 		<div class="about__image">
 			<img src="./images/image-about.png" alt="">
 		</div>
-		<div class="about__side">
+		<div class="about__side" id="about">
 			<h2 class="about__title title">О нас</h2>
 			<div class="about__text">
 				<p><strong>ООО «МК-Сервис»</strong> - финансирует IT-проекты и компании в сфере обеспеченного кредитования, а также оказывает риэлторские услуги в сфере недвижимости, в том числе целевым клиентам с использованием материнского капитала на приобретение жилья.</p>
@@ -169,6 +170,19 @@
 	</div>
 </section>
 
+<div class="modal__hidden">
+	<div id="callback"><form class="callback" action="./">
+	<h3 class="callback__title">Оставтьте заявку на консультацию</h3>
+	<input class="callback__input" type="text" name="callback_name" placeholder="Ваше имя" autocomplete="off">
+	<input class="callback__input" type="tel" name="callback_phone" placeholder="Ваше телефон" autocomplete="off">
+	<div class="callback__agree">
+		<input type="checkbox" name="callback_agree" checked>
+		<p>Я согласен с уcловиями обработки <a href="./">персональных данных</a></p>
+	</div>
+	<input class="callback__submit" type="submit" value="Отправить">
+</form>
+</div>
+</div> 
 <footer class="footer"> 
 	<div class="footer__inner container">
 		<a class="footer__logo" href="./">
@@ -182,7 +196,7 @@
 				<a class="footer__block-item" href="#about">О компании</a>
 				<a class="footer__block-item" href="#investments">Программы по инвестициям</a>
 				<a class="footer__block-item" href="#reviews">Отзывы</a>
-				<a class="footer__block-item footer__block-item_order" href="#order">Оформить заявку</a>
+				<a class="footer__block-item footer__block-item_order" href="/" data-modal="callback">Оформить заявку</a>
 			</div>
 			<div class="footer__block">
 				<h3 class="footer__block-title">Телефон</h3>
